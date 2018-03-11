@@ -1,0 +1,10 @@
+package thirty.days.of.code;
+
+public class PrimeNumber {
+	String temp = "sdsad;";
+	public static void main(String[] args) {
+		String temp1 = "sdsad;";
+		temp.
+	}
+
+}

@@ -1,0 +1,46 @@
+package thirty.days.of.code;
+
+import java.util.ArrayDeque;
+import java.util.Queue;
+import java.util.Stack;
+
+public class StackQueue {
+    // Write your code here.
+    Stack<Character> st = new Stack<Character>();
+    Queue<Character> queue = new ArrayDeque<Character>();
+    
+    void pushCharacter(char c){
+        st.push(c);
+    }
+    
+    void enqueueCharacter(char c){
+        queue.add(c);
+    }
+    
+    char popCharacter(){
+        return (char)st.pop();        
+    }
+    
+    char dequeueCharacter(){
+        return (char)queue.poll();   
+    }
+    
+    public static void main(String[] args) {
+    	
+    	StackQueue sq = new StackQueue();
+    	char[] stqu = {'R','A','C','E','C','A','R'};
+		for (char c : stqu) {
+			sq.pushCharacter(c);
+			sq.enqueueCharacter(c);			
+		}
+		
+		for(int i = 0;i < stqu.length ; i++) {
+			if(sq.popCharacter()!=sq.dequeueCharacter()) {
+				System.out.println("Not Equal");
+			}
+		}
+			
+	}
+    
+
+}

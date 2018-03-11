@@ -1,0 +1,18 @@
+package thirty.days.of.code;
+
+import java.util.Calendar;
+
+public class DateCalculation {
+	
+	public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        //Scanner sc = new Scanner (System.in);
+        String endDate = "9 6 2015";
+        String startDate = "6 6 2015";
+        
+        Calendar cal = new Calendar(end)
+        
+        
+    }
+
+}

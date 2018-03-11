@@ -1,0 +1,41 @@
+package thirty.days.of.code;
+
+import java.util.Scanner;
+
+public class PrimeNumber {
+
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
+        Scanner stin = new Scanner(System.in);
+        int n = stin.nextInt();
+        
+        for(int i = 0; i < n; i++){
+            int temp = stin.nextInt();
+            boolean notPrime = false;
+            if(temp<=1){
+                System.out.println("Not prime");
+                continue;
+            }else if(temp<=3){
+                 System.out.println("Prime");
+                 continue;
+            }else if(temp%2==0 || temp%3==0 ){
+                System.out.println("Not prime");
+                continue;
+            }
+
+            for(int j = 5; j*j <= temp; j++){
+                if(temp%j==0){
+                    notPrime = true;
+                    System.out.println("Not prime");
+                    break;
+                }                    
+            }
+            if(notPrime)
+                continue;
+            System.out.println("Prime");            
+        }
+        
+    }
+}

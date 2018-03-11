@@ -1,0 +1,46 @@
+package thirty.days.of.code;
+
+public class BinaSearchTree {
+	
+	static int height = 0;
+
+    static int  getHeight(Node root){            
+        
+        if(root.left != null)
+            getDepth(0,root.left);
+        
+        if(root.right != null)
+            getDepth(0,root.right);
+        
+        return height;
+    }
+
+
+
+
+    static void getDepth(int depth,Node root){
+        
+        depth++;
+        
+        if(root.left != null)
+            getDepth(depth,root.left);
+
+        if(root.right != null)
+            getDepth(depth,root.right);
+    
+        if(root.left == null && root.right == null)
+            height = height>depth?height:depth;
+                    
+    }
+
+
+}
+
+class Node{
+    Node left,right;
+    int data;
+    Node(int data){
+        this.data=data;
+        left=right=null;
+    }
+}

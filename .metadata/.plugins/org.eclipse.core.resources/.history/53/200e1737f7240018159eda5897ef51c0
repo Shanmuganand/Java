@@ -1,0 +1,38 @@
+package thirty.days.of.code;
+
+import java.util.concurrent.ThreadLocalRandom;
+
+public class TestCaseGeneration {
+	
+	
+	
+	public static void ss(String[] ar) {
+		
+		int testCases = 5;
+		System.out.println(testCases);
+		for (int i = 0; i < testCases; i++) {
+			
+			int n = ThreadLocalRandom.current().nextInt(3, 201);
+			int k = ThreadLocalRandom.current().nextInt(1, n);
+			System.out.println(n+" "+k);
+			for (int j = 0; j < n; j++) {
+				int temp = 0;
+				if(j==0)
+					temp = -5;
+				else if(j==1)
+					temp = 7;
+				else if(j==2)
+					temp = 0;
+				else
+					temp = ThreadLocalRandom.current().nextInt(-1000, 1000);
+				
+				if(j==n-1)
+					System.out.println(temp);	
+				else					
+					System.out.print(temp+" ");
+			}
+		}
+		//randomNumber.nextInt(6);
+	}
+
+}

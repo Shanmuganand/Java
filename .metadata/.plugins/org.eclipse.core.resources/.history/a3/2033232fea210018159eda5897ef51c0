@@ -1,0 +1,30 @@
+package thirty.days.of.code;
+
+import java.util.PriorityQueue;
+import java.util.Queue;
+import java.util.Stack;
+
+public class StackQueue {
+    // Write your code here.
+    Stack<Character> st = new Stack<Character>();
+    Queue<Character> queue = new PriorityQueue<Character>();
+    
+    void pushCharacter(char c){
+        st.push(c);
+    }
+    
+    void enqueueCharacter(char c){
+        queue.poll();
+    }
+    
+    char popCharacter(){
+        return (char)st.pop();
+        
+    }
+    
+    char dequeueCharacter(){
+        return (char)queue.remove();
+        
+    
+
+}

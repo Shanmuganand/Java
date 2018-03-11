@@ -1,0 +1,19 @@
+package thirty.days.of.code;
+
+public class Exception {
+	
+	    
+	    public int power(int i, int j) throws ExceptionHandling{
+	        
+	        if(i<0 || j<0){
+	            throw new ExceptionHandling("n and p should be non-negative");
+	        }else{
+	            return i^j;
+	        }
+	        
+	    }
+	    
+	    
+
+
+}

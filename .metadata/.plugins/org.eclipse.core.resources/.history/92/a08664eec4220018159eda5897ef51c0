@@ -1,0 +1,45 @@
+package thirty.days.of.code;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class BinaryTraversal {
+	Map<Integer,String> map = new HashMap<Integer,String>();
+
+	static void levelOrder(Node root){
+	      //Write your code here
+	      if(root != null){
+	          print(root.data); 
+	          nodedata(root);
+	      }
+	}
+
+	static void nodedata(Node root,int i){
+	    if(root != null){
+	          node(root.left);
+	          node(root.right);
+	          nodedata(root.left);
+	          nodedata(root.right);
+	      }
+	}
+
+	static void node(Node node){
+	    if(node!=null){
+	        print(node.data);
+	    }
+	}
+	static void print(int data){
+	    System.out.print(data + " ");
+	   // map.
+	}
+
+}
+
+class Node{
+    Node left,right;
+    int data;
+    Node(int data){
+        this.data=data;
+        left=right=null;
+    }
+}
